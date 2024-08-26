@@ -8,14 +8,38 @@ html {
     justify-content: center;
     align-items: center;
     background-image: url('background.jpg');
-    background-size: cover;
+    background-size:auto;
     background-position: center;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.upper_container {
+    height: 10vh;
+    width: 95vw;
+    display: flex;
+    position: relative;
+    justify-content: end;
+    flex-direction: row;
+}
+
+.lower_container {
+    height: 15vh;
+    width: 95vw;
+    display: flex;
+    position: relative;
+    justify-content: end;
+    flex-direction: row;
 }
 
 .heading_container {
     align-items: center;
     display: flex;
-    height: 100vh;
+    height: 75vh;
     width: 100%;
     position: relative;
     justify-content: center;
@@ -25,7 +49,7 @@ html {
 }
 
 .heading, .heading_stroked {
-    font-size: 8vw;
+    font-size: 7vw;
     font-weight: bold;
     margin: 0;
     padding: 0;
@@ -36,12 +60,29 @@ html {
 }
 
 .heading {
+    color: transparent;
+    position: relative;
+    -webkit-text-stroke: 0.25vw #fff;
+}
+
+.heading::before {
+    content: "ANUBHAV";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     color: #fff;
+    transition: 1s ease-out;
+}
+
+.heading:hover::before {
+    width: 0% ;
+    color: transparent;
 }
 
 .heading_stroked {
     color: transparent;
-    -webkit-text-stroke: 0.25vw white;
+    -webkit-text-stroke: 0.25vw #fff;
     position: relative;
 }
 
