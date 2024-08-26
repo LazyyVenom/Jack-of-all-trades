@@ -16,36 +16,63 @@ html {
     align-items: center;
     display: flex;
     height: 100vh;
-    position: absolute;
+    width: 100%;
+    position: relative;
     justify-content: center;
+    flex-direction: column; 
+    text-align: center;
+    padding: 0 10px;
+}
+
+.heading, .heading_stroked {
+    font-size: 8vw;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    line-height: 1;
 }
 
 .heading {
     color: #fff;
-    font-size: 100px;
-    font-weight: 700;
-    padding: 0 20px;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
 }
 
 .heading_stroked {
-    font-size: 100px;
-    font-weight: 700;
-    padding: 0 20px;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
     color: transparent;
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 0.25vw white;
+    position: relative;
 }
 
-.heading_stroked:hover {
+.heading_stroked::before{
+    content: "CHOUBEY";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
     color: #fff;
+    transition: 1s ease-out;
+}
+
+.heading_stroked:hover::before {
+    width: 100%;
 }
 
 .heading:hover {
     color: transparent;
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 0.25vw white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .heading, .heading_stroked {
+        font-size: 12vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading, .heading_stroked {
+        font-size: 16vw;
+    }
 }
