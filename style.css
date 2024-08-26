@@ -168,8 +168,30 @@ html {
     /* Trigger sparkle animation on hover */
 }
 
-/* Animation */
+/* Card Label Styling */
+.card_label{
+    position: absolute;
+    top: -6vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5vh;
+    font-weight: bold;
+    color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    transition: transform 1s ease-out;
+}
 
+.golden_card:hover .card_label {
+    color: rgb(255, 246, 145);
+}
+
+.cards:hover .card_label {
+    color: white;
+}
+
+/* Animation */
 @keyframes sparkle {
 
     0%,
@@ -200,5 +222,19 @@ html {
     .heading,
     .heading_stroked {
         font-size: 16vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .card_label,
+    .golden_card_label {
+        font-size: 2vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .card_label,
+    .golden_card_label {
+        font-size: 3vh;
     }
 }
