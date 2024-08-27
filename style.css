@@ -152,8 +152,8 @@ html {
     background-color: white;
     border-radius: 5%;
     transition: transform 0.5s ease-out;
-    background: radial-gradient(circle at 50% 100%, #4f46e480 5%, #4f46e4 5% 10%, #4f46e480 10% 15%, #4f46e4 15% 20%, #4f46e480 20% 25%, #4f46e4 25% 30%, #4f46e480 30% 35%, #4f46e4 35% 40%, transparent 40%), radial-gradient(circle at 100% 50%, #4f46e480 5%, #4f46e4 5% 10%, #4f46e480 10% 15%, #4f46e4 15% 20%, #4f46e480 20% 25%, #4f46e4 25% 30%, #4f46e480 30% 35%, #4f46e4 35% 40%, transparent 40%), radial-gradient(circle at 50% 0%, #4f46e480 5%, #4f46e4 5% 10%, #4f46e480 10% 15%, #4f46e4 15% 20%, #4f46e480 20% 25%, #4f46e4 25% 30%, #4f46e480 30% 35%, #4f46e4 35% 40%, transparent 40%), radial-gradient(circle at 0 50%, #4f46e480 5%, #4f46e4 5% 10%, #4f46e480 10% 15%, #4f46e4 15% 20%, #4f46e480 20% 25%, #4f46e4 25% 30%, #4f46e480 30% 35%, #4f46e4 35% 40%, transparent 40%);
-    background-size: 2em 2em;
+    background: radial-gradient(circle at bottom, var(--cards_color), var(--cards_color) 10%, transparent 10%, transparent 20%, var(--cards_color) 20%, var(--cards_color) 30%, transparent 30%, transparent 40%, var(--cards_color) 40%, var(--cards_color) 50%, transparent 50%, transparent 60%, var(--cards_color) 60%, var(--cards_color) 70%, transparent 70%, transparent 80%, var(--cards_color) 80%, var(--cards_color) 90%, transparent 90%);
+    background-size: 1em 1em;
     background-color: #ffffff;
     opacity: 1
 }
