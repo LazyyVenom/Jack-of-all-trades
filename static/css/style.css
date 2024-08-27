@@ -188,11 +188,7 @@ html {
     height: 12vh;
     background-color: white;
     border-radius: 5%;
-    transition: transform 0.5s ease-out;
-    background: radial-gradient(circle at bottom, var(--cards_color), var(--cards_color) 10%, transparent 10%, transparent 20%, var(--cards_color) 20%, var(--cards_color) 30%, transparent 30%, transparent 40%, var(--cards_color) 40%, var(--cards_color) 50%, transparent 50%, transparent 60%, var(--cards_color) 60%, var(--cards_color) 70%, transparent 70%, transparent 80%, var(--cards_color) 80%, var(--cards_color) 90%, transparent 90%);
-    background-size: 1em 1em;
-    background-color: #ffffff;
-    opacity: 0.9
+    background-image: url('../images/card_purple.png');
 }
 
 .cards:hover::before {
