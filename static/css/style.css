@@ -1,9 +1,9 @@
 /* Defining Variables for Colors */
 :root {
     --cards_color: #1e4278;
-    --icons_bg: #1e4278;
+    --icons_bg: #363636;
     --icons_fg: #fff;
-    --icons_bg_darker: #142b4e;
+    --icons_bg_darker: #2c2c2c;
     --golden_card_bg: rgb(255, 246, 145);
     --golden_card_fg: rgb(183, 147, 42);
 }
@@ -167,28 +167,26 @@ html {
 
 .cards {
     position: relative;
-    width: 8vh;
-    height: 12vh;
-    border: 5px solid var(--cards_color);
-    background-color: white;
+    width: 10vh;
+    height: 15vh;
     border-radius: 5%;
-    background: radial-gradient(circle at bottom, var(--cards_color), var(--cards_color) 10%, transparent 10%, transparent 20%, var(--cards_color) 20%, var(--cards_color) 30%, transparent 30%, transparent 40%, var(--cards_color) 40%, var(--cards_color) 50%, transparent 50%, transparent 60%, var(--cards_color) 60%, var(--cards_color) 70%, transparent 70%, transparent 80%, var(--cards_color) 80%, var(--cards_color) 90%, transparent 90%);
-    background-size: 1em 1em;
-    background-color: #ffffff;
-    opacity: 0.9;
+    background-image: url('../images/card_purple.png');
+    background-size:contain;
+    background-position: center;
     transition: transform 0.5s ease-out;
 }
 
 .cards::before,
 .cards::after {
     content: "";
-    border: 0.8vh solid var(--cards_color);
     position: absolute;
-    width: 8vh;
-    height: 12vh;
-    background-color: white;
+    width: 10vh;
+    height: 15vh;
     border-radius: 5%;
     background-image: url('../images/card_purple.png');
+    background-size:contain;
+    background-position: center;
+    transition: transform 0.5s ease-out;
 }
 
 .cards:hover::before {
