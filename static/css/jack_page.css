@@ -3,6 +3,7 @@
 .jack_of_all_trades {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     position: absolute;
     visibility: hidden;
