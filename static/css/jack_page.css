@@ -1,15 +1,26 @@
-
+/* Setting Up for jack of all trades Screen */
 
 .jack_of_all_trades {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     position: absolute;
     visibility: hidden;
     z-index: 2;
     background-color: rgba(255, 255, 255, 0.653);
-    filter: blur(50px);
-    width: 90vw;
-    height: 90vh;
+    /* filter: blur(50px); */
+    width: 93vw;
+    height: 95vh;
 }
 
 .cards, .golden_card, .locator {
     cursor: pointer;
+}
+
+.card {
+    position: relative;
+    height: 40vh;
+    width: 15vw;
+    background-color: aqua;
+    border: 1vh dashed black;
 }

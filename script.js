@@ -1,8 +1,15 @@
 // Started Working on the Cards showing up using JS
 
-const myDiv = document.getElementById('myDiv');
+const jackCardsTrigger = document.getElementById('jack_cards_trigger');
+const jackCards = document.getElementById('jack_cards');
 
-// Add an event listener for the 'click' event
-myDiv.addEventListener('click', function () {
-    console.log('Div was clicked!');
+jackCardsTrigger.addEventListener('click', function () {
+    console.log('Jack was clicked!');
+    jackCards.style.visibility = 'visible';
+});
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        jackCards.style.visibility = 'hidden';
+    }
 });
