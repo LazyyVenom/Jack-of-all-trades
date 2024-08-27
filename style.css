@@ -135,10 +135,10 @@ html {
     border: 5px solid var(--cards_color);
     background-color: white;
     border-radius: 5%;
-    background-image: linear-gradient(135deg, var(--cards_color) 25%, transparent 25%), linear-gradient(225deg, var(--cards_color) 25%, transparent 25%), linear-gradient(45deg, var(--cards_color) 25%, transparent 25%), linear-gradient(315deg, var(--cards_color) 25%, #e5e5f7 25%);
-    background-position: 10px 0, 10px 0, 0 0, 0 0;
-    background-size: 10px 10px;
-    background-repeat: repeat;
+    background: radial-gradient(circle at bottom, var(--cards_color), var(--cards_color) 10%, transparent 10%, transparent 20%, var(--cards_color) 20%, var(--cards_color) 30%, transparent 30%, transparent 40%, var(--cards_color) 40%, var(--cards_color) 50%, transparent 50%, transparent 60%, var(--cards_color) 60%, var(--cards_color) 70%, transparent 70%, transparent 80%, var(--cards_color) 80%, var(--cards_color) 90%, transparent 90%);
+    background-size: 1em 1em;
+    background-color: #ffffff;
+    opacity: 0.9;
     transition: transform 0.5s ease-out;
 }
 
@@ -155,7 +155,7 @@ html {
     background: radial-gradient(circle at bottom, var(--cards_color), var(--cards_color) 10%, transparent 10%, transparent 20%, var(--cards_color) 20%, var(--cards_color) 30%, transparent 30%, transparent 40%, var(--cards_color) 40%, var(--cards_color) 50%, transparent 50%, transparent 60%, var(--cards_color) 60%, var(--cards_color) 70%, transparent 70%, transparent 80%, var(--cards_color) 80%, var(--cards_color) 90%, transparent 90%);
     background-size: 1em 1em;
     background-color: #ffffff;
-    opacity: 1
+    opacity: 0.9
 }
 
 .cards:hover::before {
