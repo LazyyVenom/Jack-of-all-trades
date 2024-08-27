@@ -1,3 +1,13 @@
+/* Defining Variables for Colors */
+:root {
+    --cards_color: #1e4278;
+    --icons_bg: #1e4278;
+    --icons_fg: #fff;
+    --icons_bg_darker: #142b4e;
+    --golden_card_bg: rgb(255, 246, 145);
+    --golden_card_fg: rgb(183, 147, 42);
+}
+
 body,
 html {
     height: 100%;
@@ -12,7 +22,7 @@ html {
 .background {
     position: absolute;
     z-index: -1;
-    background-image: url('background.jpg');
+    background-image: url('static/background.jpg');
     /* filter: blur(1px); */
     background-size: auto;
     background-position: center;
@@ -32,15 +42,18 @@ html {
     display: flex;
     position: relative;
     justify-content: end;
+    align-items: end;
     flex-direction: row;
+    gap: 1vw;
 }
 
 .lower_container {
-    height: 15vh;
+    height: 20vh;
     width: 95vw;
     display: flex;
     position: relative;
     justify-content: center;
+    align-items: start;
     gap: 12vw;
     flex-direction: row;
 }
@@ -48,7 +61,7 @@ html {
 .heading_container {
     align-items: center;
     display: flex;
-    height: 75vh;
+    height: 70vh;
     width: 100%;
     position: relative;
     justify-content: center;
@@ -59,7 +72,7 @@ html {
 
 .heading,
 .heading_stroked {
-    font-size: 7vw;
+    font-size: 8vw;
     font-weight: bold;
     margin: 0;
     padding: 0;
@@ -117,28 +130,36 @@ html {
 
 .cards {
     position: relative;
-    width: 6vh;
-    height: 9vh;
-    border: 5px solid black;
+    width: 8vh;
+    height: 12vh;
+    border: 5px solid var(--cards_color);
     background-color: white;
     border-radius: 5%;
+    background-image: linear-gradient(135deg, var(--cards_color) 25%, transparent 25%), linear-gradient(225deg, var(--cards_color) 25%, transparent 25%), linear-gradient(45deg, var(--cards_color) 25%, transparent 25%), linear-gradient(315deg, var(--cards_color) 25%, #e5e5f7 25%);
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 10px 10px;
+    background-repeat: repeat;
     transition: transform 0.5s ease-out;
 }
 
 .cards::before,
 .cards::after {
     content: "";
-    border: 0.8vh solid black;
+    border: 0.8vh solid var(--cards_color);
     position: absolute;
-    width: 6vh;
-    height: 9vh;
+    width: 8vh;
+    height: 12vh;
     background-color: white;
     border-radius: 5%;
     transition: transform 0.5s ease-out;
+    background: radial-gradient(circle at 50% 100%, #4f46e480 5%, #4f46e4 5% 10%, #4f46e480 10% 15%, #4f46e4 15% 20%, #4f46e480 20% 25%, #4f46e4 25% 30%, #4f46e480 30% 35%, #4f46e4 35% 40%, transparent 40%), radial-gradient(circle at 100% 50%, #4f46e480 5%, #4f46e4 5% 10%, #4f46e480 10% 15%, #4f46e4 15% 20%, #4f46e480 20% 25%, #4f46e4 25% 30%, #4f46e480 30% 35%, #4f46e4 35% 40%, transparent 40%), radial-gradient(circle at 50% 0%, #4f46e480 5%, #4f46e4 5% 10%, #4f46e480 10% 15%, #4f46e4 15% 20%, #4f46e480 20% 25%, #4f46e4 25% 30%, #4f46e480 30% 35%, #4f46e4 35% 40%, transparent 40%), radial-gradient(circle at 0 50%, #4f46e480 5%, #4f46e4 5% 10%, #4f46e480 10% 15%, #4f46e4 15% 20%, #4f46e480 20% 25%, #4f46e4 25% 30%, #4f46e480 30% 35%, #4f46e4 35% 40%, transparent 40%);
+    background-size: 2em 2em;
+    background-color: #ffffff;
+    opacity: 1
 }
 
 .cards:hover::before {
-    transform: rotate(15deg) translate(10px, 0px);
+    transform: rotate(13deg) translate(10px, 0px);
 }
 
 .cards:hover::after {
@@ -150,12 +171,16 @@ html {
 }
 
 .golden_card {
-    border: 0.8vh solid rgb(183, 147, 42);
+    border: 0.8vh solid var(--golden_card_fg);
     position: relative;
-    width: 6vh;
-    height: 9vh;
-    background-color: rgb(255, 246, 145);
+    width: 8vh;
+    height: 12vh;
+    background-color: var(--golden_card_bg);
     border-radius: 5%;
+    background-image: linear-gradient(135deg, var(--golden_card_fg) 25%, transparent 25%), linear-gradient(225deg, var(--golden_card_fg) 25%, transparent 25%), linear-gradient(45deg, var(--golden_card_fg) 25%, transparent 25%), linear-gradient(315deg, var(--golden_card_fg) 25%, var(--golden_card_bg) 25%);
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 10px 10px;
+    background-repeat: repeat;
     transition: transform 0.5s ease-out;
     box-shadow: 0 0 8px 2px rgba(208, 169, 52, 0.2),
         0 0 12px 6px rgba(255, 215, 0, 0.2),
@@ -169,26 +194,63 @@ html {
 }
 
 /* Card Label Styling */
-.card_label{
+.card_label {
     position: absolute;
-    top: -6vh;
-    left: 50%;
+    top: -2vh;
+    left: 20%;
     transform: translateX(-50%);
-    font-size: 1.5vh;
+    font-family: Arial;
+    font-size: 0.01vh;
     font-weight: bold;
-    color: transparent;
-    text-transform: uppercase;
     text-align: center;
     width: 100%;
-    transition: transform 1s ease-out;
+    transition: transform 0.5s ease-out;
+}
+
+.golden_card .card_label {
+    color: var(--golden_card_bg);
 }
 
 .golden_card:hover .card_label {
-    color: rgb(255, 246, 145);
+    color: var(--golden_card_bg);
+    transform: scale(250);
 }
 
 .cards:hover .card_label {
     color: white;
+    transform: scale(250);
+}
+
+.locator,
+.locator::before {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 8vh;
+    width: 8vh;
+    z-index: 1;
+    background-color: var(--icons_bg);
+}
+
+.locator::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: var(--icons_bg_darker);
+    transition: 0.3s ease-out;
+}
+
+.locator:hover::before {
+    width: 100%;
+}
+
+.locator i {
+    font-size: 4.5vh;
+    color: var(--icons_fg);
+    z-index: 2;
 }
 
 /* Animation */
@@ -205,36 +267,5 @@ html {
         box-shadow: 0 0 20px 6px rgba(208, 169, 52, 0.7),
             0 0 25px 10px rgba(255, 215, 0, 0.7),
             0 0 35px 15px rgba(255, 223, 0, 0.7);
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-
-    .heading,
-    .heading_stroked {
-        font-size: 12vw;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .heading,
-    .heading_stroked {
-        font-size: 16vw;
-    }
-}
-
-@media (max-width: 768px) {
-    .card_label,
-    .golden_card_label {
-        font-size: 2vh;
-    }
-}
-
-@media (max-width: 480px) {
-    .card_label,
-    .golden_card_label {
-        font-size: 3vh;
     }
 }
