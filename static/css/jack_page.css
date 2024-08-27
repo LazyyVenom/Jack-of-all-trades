@@ -1,19 +1,26 @@
 /* Setting Up for jack of all trades Screen */
 
 .jack_of_all_trades {
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     align-items: center;
     gap: 4.5vh;
     flex-wrap: wrap;
     position: absolute;
-    visibility: hidden;
     border-radius: 1%;
     z-index: 2;
     background-color: rgba(255, 255, 255, 0.336);
     backdrop-filter: blur(10px);
     width: 90%;
     height: 95%;
+}
+
+.animate {
+    display: flex;
+}
+
+.jack_of_all_trades .animate .cards {
+    animation-play-state: running;
 }
 
 .cards, .golden_card, .locator {
@@ -29,8 +36,124 @@
     filter: drop-shadow(0vh 2vh 5vh #222);
 }
 
-.card {
-    animation: name duration timing-function delay iteration-count direction fill-mode;
+.card_1 {
+    animation: card_start_1 1s ease-out;
+}
+
+.card_2 {
+    animation: card_start_2 1s ease-out;
+}
+
+.card_3 {
+    animation: card_start_3 1s ease-out;
+}
+
+.card_4 {
+    animation: card_start_4 1s ease-out;
+}
+
+.card_5 {
+    animation: card_start_5 1s ease-out;
+}
+
+.card_6 {
+    animation: card_start_6 1s ease-out;
+}
+
+.card_7 {
+    animation: card_start_7 1s ease-out;
+}
+
+.card_8 {
+    animation: card_start_8 1s ease-out;
+}
+
+.card_9 {
+    animation: card_start_9 1s ease-out;
+}
+
+.card_10 {
+    animation: card_start_10 1s ease-out;
 }
 
 /* Animations */
+@keyframes card_start_1 {
+    0% {
+        transform: translate(28vh,45vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_2 {
+    0% {
+        transform: translate(12vh,45vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_3 {
+    0% {
+        transform: translate(-2vh,45vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_4 {
+    0% {
+        transform: translate(-27vh,45vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_5 {
+    0% {
+        transform: translate(-57vh,45vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_6 {
+    0% {
+        transform: translate(28vh,2vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_7 {
+    0% {
+        transform: translate(12vh,2vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_8 {
+    0% {
+        transform: translate(-2vh,2vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_9 {
+    0% {
+        transform: translate(-27vh,2vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
+@keyframes card_start_10 {
+    0% {
+        transform: translate(-57vh,2vh);
+    }
+    100% {
+        transform: translate(0px,0px);
+    }
+}
