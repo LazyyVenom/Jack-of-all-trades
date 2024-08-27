@@ -4,7 +4,6 @@ const jackCardsTrigger = document.getElementById('jack_cards_trigger');
 const jackCards = document.getElementById('jack_cards');
 
 jackCardsTrigger.addEventListener('click', function () {
-    console.log('Jack was clicked!');
     jackCards.style.visibility = 'visible';
 });
 
