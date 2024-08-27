@@ -23,8 +23,7 @@ html {
 .background {
     position: absolute;
     z-index: -1;
-    background-image: url('static/background.jpg');
-    /* filter: blur(1px); */
+    background-image: url('../images/background.jpg');
     background-size: auto;
     background-position: center;
     height: 100vh;
