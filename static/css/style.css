@@ -170,7 +170,7 @@ html {
     width: 10vh;
     height: 15vh;
     border-radius: 5%;
-    background-image: url('../images/card_purple.png');
+    background-image: url('../images/card_normal.png');
     background-size:contain;
     background-position: center;
     transition: transform 0.5s ease-out;
@@ -183,7 +183,7 @@ html {
     width: 10vh;
     height: 15vh;
     border-radius: 5%;
-    background-image: url('../images/card_purple.png');
+    background-image: url('../images/card_normal.png');
     background-size:contain;
     background-position: center;
     transition: transform 0.5s ease-out;
@@ -202,19 +202,14 @@ html {
 }
 
 .golden_card {
-    border: 0.8vh solid var(--golden_card_fg);
     position: relative;
-    width: 8vh;
-    height: 12vh;
-    background-color: var(--golden_card_bg);
+    width: 10vh;
+    height: 15vh;
     border-radius: 5%;
-    background: radial-gradient(circle at bottom, var(--golden_card_fg), var(--golden_card_fg) 10%, transparent 10%, transparent 20%, var(--golden_card_fg) 20%, var(--golden_card_fg) 30%, transparent 30%, transparent 40%, var(--golden_card_fg) 40%, var(--golden_card_fg) 50%, transparent 50%, transparent 60%, var(--golden_card_fg) 60%, var(--golden_card_fg) 70%, transparent 70%, transparent 80%, var(--golden_card_fg) 80%, var(--golden_card_fg) 90%, transparent 90%);
-    background-size: 1em 1em;
-    background-color: var(--golden_card_bg);
+    background-image: url('../images/card_golden.png');
+    background-size:contain;
+    background-position: center;
     transition: transform 0.5s ease-out;
-    box-shadow: 0 0 8px 2px rgba(208, 169, 52, 0.2),
-        0 0 12px 6px rgba(255, 215, 0, 0.2),
-        0 0 18px 10px rgba(255, 223, 0, 0.2);
 }
 
 .golden_card:hover {
