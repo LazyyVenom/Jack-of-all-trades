@@ -324,7 +324,7 @@ html {
 
 @keyframes upper_container_animation {
     0% {
-        translate: 0vh -25vh;
+        translate: 0vh -15vh;
     }
     100% {
         translate: 0vh 0vh;
