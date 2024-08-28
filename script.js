@@ -7,6 +7,7 @@ jackCardsTrigger.addEventListener('click', function () {
     jackCards.classList.add('animate');
 });
 
+
 document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
         jackCards.classList.remove('animate');
