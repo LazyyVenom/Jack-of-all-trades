@@ -229,9 +229,9 @@ html {
 .card_label {
     position: absolute;
     top: -2vh;
-    left: 20%;
+    left: 10%;
     transform: translateX(-50%);
-    font-family: Arial;
+    font-family:sans-serif;
     font-size: 0.01vh;
     font-weight: bold;
     text-align: center;
