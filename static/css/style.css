@@ -40,6 +40,7 @@ html {
     filter: drop-shadow(0vh 0vh 10vh #222);
     opacity: 0.8;
     transition: 0.8s ease-out;
+    animation: card_ace_come 1s ease-out;
 }
 
 .card_back {
@@ -53,6 +54,7 @@ html {
     opacity: 0.8;
     transition: 0.8s ease-out;
     border-radius: 4%;
+    animation: card_back_come 1s ease-out;
 }
 
 .ace:hover {
@@ -82,6 +84,7 @@ html {
     align-items: end;
     flex-direction: row;
     gap: 1vw;
+    animation: upper_container_animation 1s ease-out;
 }
 
 .lower_container {
@@ -93,6 +96,7 @@ html {
     align-items: start;
     gap: 12vw;
     flex-direction: row;
+    animation: lower_container_animation 1s ease-out;
 }
 
 .heading_container {
@@ -117,6 +121,7 @@ html {
     text-transform: uppercase;
     transition: all 0.3s ease;
     line-height: 1;
+    animation: text_animation 1s ease-in;
 }
 
 .heading {
@@ -133,6 +138,7 @@ html {
     overflow: hidden;
     color: #fff;
     transition: 1s ease-out;
+    animation: text_animation 1s ease-in;
 }
 
 .heading:hover::before {
@@ -153,6 +159,7 @@ html {
     height: 100%;
     overflow: hidden;
     color: #fff;
+    animation: text_animation 1s ease-in;
     transition: 1s ease-out;
 }
 
@@ -279,6 +286,51 @@ html {
 }
 
 /* Animation */
+@keyframes card_ace_come {
+    0% {
+        translate: 90px 90px;
+    }
+    100% {
+        translate: 0px 0px;
+    }
+}
+
+@keyframes card_back_come {
+    0% {
+        translate: -90px -90px;
+    }
+    100% {
+        translate: 0px 0px;
+    }
+}
+
+@keyframes text_animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes lower_container_animation {
+    0% {
+        translate: 0vh 25vh;
+    }
+    100% {
+        translate: 0vh 0vh;
+    }
+}
+
+@keyframes upper_container_animation {
+    0% {
+        translate: 0vh -25vh;
+    }
+    100% {
+        translate: 0vh 0vh;
+    }
+}
+
 @keyframes sparkle {
 
     0%,
