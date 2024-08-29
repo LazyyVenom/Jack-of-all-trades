@@ -12,3 +12,22 @@ document.addEventListener('keydown', function (event) {
         jackCards.classList.remove('animate');
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".jack_of_all_trades .card");
+
+    cards.forEach(card => {
+        card.addEventListener("click", function () {
+            const cardFlip = this.querySelector(".card_flip");
+
+            if (cardFlip && cardFlip.style.display == "flex") {
+                cardFlip.style.display = "none";
+            }
+            else {
+                if (cardFlip) {
+                    cardFlip.style.display = "flex";
+                }
+            }
+        });
+    });
+});

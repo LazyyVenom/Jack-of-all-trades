@@ -27,6 +27,13 @@
     cursor: pointer;
 }
 
+.card_flip {
+    position: relative;
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
 .card {
     position: relative;
     height: 40vh;
