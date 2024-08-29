@@ -17,6 +17,7 @@
 
 .animate {
     display: flex;
+    animation-play-state: running;
 }
 
 .jack_of_all_trades .animate .cards {
@@ -30,8 +31,10 @@
 .card_flip {
     position: relative;
     display: none;
+    background-color: #222;
     height: 100%;
     width: 100%;
+    animation: appear_slowly 1s ease ;
 }
 
 .card {
@@ -84,6 +87,15 @@
 }
 
 /* Animations */
+@keyframes appear_slowly {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes card_start_1 {
     0% {
         transform: translate(28vh,45vh);
