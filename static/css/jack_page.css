@@ -82,7 +82,7 @@
 
 .card:hover {
     transform: scale(1.025);
-    filter: drop-shadow(0vh 0vh 1.5vh #fff);
+    filter: drop-shadow(0vh 0vh 1.2vh #fff);
 }
 
 .card_1 {
