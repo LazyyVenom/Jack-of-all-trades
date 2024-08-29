@@ -52,11 +52,12 @@
 }
 
 .skills_heading {
-    font-size:large;
+    font-size:4vh;
+    font-weight: bold;
 }
 
 .skill_details {
-    font-size: medium;
+    font-size: 2.5vh;
 }
 
 .skill_details, .skills_heading {
@@ -80,7 +81,8 @@
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: scale(1.025);
+    filter: drop-shadow(0vh 0vh 1.5vh #fff);
 }
 
 .card_1 {
