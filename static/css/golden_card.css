@@ -1,14 +1,20 @@
 .golden_card_screen {
+    position: absolute;
     width: 90%;
     height: 90%;
-    background-color: transparent;
     display: none;
     align-items: center;
     justify-content: center;
+    z-index: 2;
+}
+
+.animate {
+    display: flex;
+    animation-play-state: running;
 }
 
 .big_golden_card {
     height: 70vh;
-    width: 30vh;
+    width: 43vh;
     background-color: gold;
 }

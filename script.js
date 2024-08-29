@@ -7,28 +7,29 @@ const goldenCardTrigger = document.getElementById("golden_card");
 const goldenCardScreen = document.getElementById("golden_card_screen");
 const goldenCard = document.getElementById("big_golden_card");
 
-var cards_opened = true;
+var cards_opened = false;
 
 jackCardsTrigger.addEventListener('click', function () {
     jackCards.classList.add('animate');
+    cards_opened = true;
 });
 
 document.addEventListener('keydown', function (event) {
-    if (cards_opened === true) {
-        if (event.key === 'Escape') {
+    if (event.key === 'Escape') {
+        if (cards_opened === true) {
             jackCards.classList.remove('animate');
+            cards.forEach(card => {
+                const cardFlip = card.querySelector(".card_flip");
+                if (cardFlip.style.display == "flex") {
+                    cardFlip.classList.add('animate');
+                    cardFlip.style.display = "none";
+                }
+            });
+            cards_opened = false;
         }
-        cards.forEach(card => {
-            const cardFlip = card.querySelector(".card_flip");
-            if (cardFlip.style.display == "flex") {
-                cardFlip.classList.add('animate');
-                cardFlip.style.display = "none";
-            }
-        });
-    }
-    else {
-        if (event.key === 'Escape') {
-            goldenCardScreen.classList.remove('animate');
+        else {
+                console.log('BAWA');
+                goldenCardScreen.classList.remove('animate');
         }
     }
 });
@@ -51,5 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 goldenCardTrigger.addEventListener('click', function () {
+    console.log('Hello Clicked')
     goldenCardScreen.classList.add('animate');
 });
