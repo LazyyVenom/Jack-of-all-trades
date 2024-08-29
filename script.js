@@ -28,7 +28,6 @@ document.addEventListener('keydown', function (event) {
             cards_opened = false;
         }
         else {
-                console.log('BAWA');
                 goldenCardScreen.classList.remove('animate');
         }
     }
@@ -52,6 +51,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 goldenCardTrigger.addEventListener('click', function () {
-    console.log('Hello Clicked')
     goldenCardScreen.classList.add('animate');
 });
