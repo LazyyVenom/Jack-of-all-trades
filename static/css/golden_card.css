@@ -1,0 +1,14 @@
+.golden_card_screen {
+    width: 90%;
+    height: 90%;
+    background-color: transparent;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.big_golden_card {
+    height: 70vh;
+    width: 30vh;
+    background-color: gold;
+}

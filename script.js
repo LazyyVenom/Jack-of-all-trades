@@ -3,22 +3,34 @@
 const jackCardsTrigger = document.getElementById('jack_cards_trigger');
 const jackCards = document.getElementById('jack_cards');
 const cards = document.querySelectorAll(".jack_of_all_trades .card");
+const goldenCardTrigger = document.getElementById("golden_card");
+const goldenCardScreen = document.getElementById("golden_card_screen");
+const goldenCard = document.getElementById("big_golden_card");
+
+var cards_opened = true;
 
 jackCardsTrigger.addEventListener('click', function () {
     jackCards.classList.add('animate');
 });
 
 document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-        jackCards.classList.remove('animate');
-    }
-    cards.forEach(card => {
-        const cardFlip = card.querySelector(".card_flip");
-        if (cardFlip.style.display == "flex") {
-            cardFlip.classList.add('animate');
-            cardFlip.style.display = "none";
+    if (cards_opened === true) {
+        if (event.key === 'Escape') {
+            jackCards.classList.remove('animate');
         }
-    });
+        cards.forEach(card => {
+            const cardFlip = card.querySelector(".card_flip");
+            if (cardFlip.style.display == "flex") {
+                cardFlip.classList.add('animate');
+                cardFlip.style.display = "none";
+            }
+        });
+    }
+    else {
+        if (event.key === 'Escape') {
+            goldenCardScreen.classList.remove('animate');
+        }
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -35,4 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+});
+
+
+goldenCardTrigger.addEventListener('click', function () {
+    goldenCardScreen.classList.add('animate');
 });
