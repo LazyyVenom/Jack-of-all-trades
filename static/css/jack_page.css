@@ -27,42 +27,13 @@
     cursor: pointer;
 }
 
-.card_container {
+.card {
     position: relative;
     height: 40vh;
     width: 28vh;
-    background-color: blueviolet;
-}
-
-.card {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease;
-}
-
-.card:hover {
-    transform: rotateY(180deg);
-}
-
-.card__front {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-    background-color: antiquewhite;
-}
-
-.card__back {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-    background-color: aqua;
-    transform: rotateY(180deg);
-    /* background-image: url('../images/card_normal.png');
-    background-size: cover; */
+    background-image: url('../images/card_normal.png') ;
+    background-size: cover;
+    filter: drop-shadow(0vh 2vh 5vh #222);
 }
 
 .card_1 {
