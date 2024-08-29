@@ -24,6 +24,7 @@ html {
     position: absolute;
     z-index: -1;
     background-image: url('../images/background.jpg');
+    filter: brightness(0.5);
     background-size: auto;
     background-position: center;
     height: 100vh;

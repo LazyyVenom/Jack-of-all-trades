@@ -34,8 +34,7 @@
     display: none;
     align-items: center;
     justify-content: center;
-    background-image: url('../images/jack.jpg');
-    background-size: cover;
+    background-color: #363636;
     border-radius: 5%;
     height: 100%;
     width: 100%;
@@ -73,6 +72,7 @@
     position: relative;
     height: 40vh;
     width: 28vh;
+    border-radius: 5%;
     background-image: url('../images/card_normal.png') ;
     background-size: cover;
     filter: drop-shadow(0vh 2vh 5vh #222);
