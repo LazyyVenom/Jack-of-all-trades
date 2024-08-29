@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card_container {
+            position: relative;
+            height: 40vh;
+            width: 28vh;
+            background-color: blueviolet;
+        }
+
+        .card {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .card__front {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            backface-visibility: hidden;
+            background-color: antiquewhite;
+        }
+
+        .card__back {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            backface-visibility: hidden;
+            background-color: aqua;
+            transform: rotateY(180deg);
+            /* background-image: url('../images/card_normal.png');
+            background-size: cover; */
+        }
+
+        .flexer {
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 4.5vh;
+            flex-wrap: wrap;
+            position: absolute;
+            border-radius: 1%;
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.336);
+            backdrop-filter: blur(10px);
+            width: 90%;
+            height: 95%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flexer">
+        <div class="card_container">
+            <div class="card">
+                <div class="card__front"></div>
+                <div class="card__back"></div>
+            </div>
+        </div>
+        <div class="card_container">
+            <div class="card">
+                <div class="card__front"></div>
+                <div class="card__back"></div>
+            </div>
+        </div>
+        <div class="card_container">
+            <div class="card">
+                <div class="card__front"></div>
+                <div class="card__back"></div>
+            </div>
+        </div>
+        <div class="card_container">
+            <div class="card">
+                <div class="card__front"></div>
+                <div class="card__back"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
