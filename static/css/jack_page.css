@@ -4,7 +4,7 @@
     display: none;
     justify-content: space-evenly;
     align-items: center;
-    gap: 4.5vh;
+    gap: 6.5vh;
     flex-wrap: wrap;
     position: absolute;
     border-radius: 1%;
@@ -24,17 +24,30 @@
     animation-play-state: running;
 }
 
-.cards, .golden_card, .locator {
+.cards, .golden_card, .locator, .card {
     cursor: pointer;
 }
 
 .card_flip {
     position: relative;
     display: none;
-    background-color: #222;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/jack.jpg');
+    background-size: cover;
+    border-radius: 5%;
     height: 100%;
     width: 100%;
-    animation: appear_slowly 1s ease ;
+    animation: appear_slowly 0.5s ease ;
+}
+
+.flip_inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #363636;
+    height: 86%;
+    width: 74%;
 }
 
 .card {
@@ -44,6 +57,11 @@
     background-image: url('../images/card_normal.png') ;
     background-size: cover;
     filter: drop-shadow(0vh 2vh 5vh #222);
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
 }
 
 .card_1 {
