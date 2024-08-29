@@ -12,6 +12,7 @@
     background-color: rgba(255, 255, 255, 0.336);
     backdrop-filter: blur(10px);
     width: 90%;
+    text-align: center;
     height: 95%;
 }
 
@@ -42,12 +43,30 @@
 }
 
 .flip_inner {
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: #363636;
     height: 86%;
     width: 74%;
+}
+
+.skills_heading {
+    font-size:large;
+}
+
+.skill_details {
+    font-size: medium;
+}
+
+.skill_details, .skills_heading {
+    padding: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon {
+    font-size: 10vh;
 }
 
 .card {
